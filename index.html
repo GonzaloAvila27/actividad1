@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Mi Página Web</title>
+</head>
+<body>
+    <h1>Bienvenido a mi sitio</h1>
+
+    <h2>🌄 Imagen:</h2>
+    <img src="https://via.placeholder.com/300" alt="Imagen de ejemplo">
+
+    <h2>📋 Tabla de Ejemplo:</h2>
+    <table border="1">
+        <tr><th>Nombre</th><th>Edad</th><th>País</th></tr>
+        <tr><td>Juan</td><td>28</td><td>Argentina</td></tr>
+        <tr><td>Ana</td><td>32</td><td>Chile</td></tr>
+        <tr><td>Luis</td><td>25</td><td>Uruguay</td></tr>
+    </table>
+
+    <h2>📊 Gráfico simple (con Chart.js):</h2>
+    <canvas id="myChart" width="400" height="200"></canvas>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const ctx = document.getElementById('myChart').getContext('2d');
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: ['Enero', 'Febrero', 'Marzo'],
+                datasets: [{
+                    label: 'Ventas',
+                    data: [12, 19, 3],
+                    borderWidth: 1
+                }]
+            },
+            options: {
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+    </script>
+</body>
+</html>
